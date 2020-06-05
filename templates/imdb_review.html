@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    < <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type = "text/css" href="{{ url_for('static',filename='css/style.css')}}">
+      <title>Movie Sentiment Analyzer</title>
+  </head>
+    <SCRIPT LANGUAGE="JavaScript">
+        function welcome(){
+
+        alert("Green is an emotionally positive color & Red is an emotionally negative color ")
+
+        }
+
+
+    </SCRIPT>
+
+  <body onload="welcome()">
+   <nav class="navbar bg-nav">
+		<h1 class="navbar-brand text-light"><strong>Sentiment Analizer Web App</strong></h1>
+	</nav>
+
+
+    <div class="container">
+        <div class="col-md-12">
+
+                <h1 class="text-center text-warning"><strong>{% block movie_name %}{{movie_name}}{% endblock %}</strong></h1><br>
+            </div>
+
+
+        <div class="row">
+
+
+              <div class="col-md-12">
+                  <p class="text-center"><img src="{{ imag }}" style="height: 300px;border:1px solid grey; margin: 2px 2px 2px 2px;padding:2px 2px 2px 2px;"></p>
+
+
+
+            </div>
+
+            </div>
+            <div class="row">
+            <div class="col-md-4">
+                <h1 class="text-warning"><strong>IMDB Rating:</strong></h1>
+                <div class="text-align: center text-success"><h1><strong>{% for i in movie_rating %}{{i}}{% endfor %}</strong></h1></div>
+
+            </div>
+            <div class="col-md-4">
+                <h1 class="text-warning"><strong>Movie Details:</strong></h1>
+
+                <div class="text-success text-justify">{% for movies in movie_details  %}
+                    {{movies}}<br>
+                    {% endfor %}</div>
+            </div>
+            <div class="col-md-4">
+                <h1 class="text-warning"><strong>Movie Plot:</strong></h1>
+                <div class="text-success text-justify">{{plot}}<br></div>
+            </div>
+
+				</div>
+
+        <div class="row">
+                    <div class="col-md-12"><h1><br></h1></div>
+             <div class="col-md-12">
+                 <br>
+                 <h1 class="text-center text-warning"><strong>User Reviews </strong></h1> <br>
+                 <div class="col-md-12"><h1><br></h1></div>
+                 <div>{% for t,r,u,re,colo, rev in review_complete %}<h3 class="text-light text-center"><strong> {{t}}</strong> |  rated : {{r}}  |  by - {{u}}  | </h3><br><h5 class="{{re}} text-justify"><svg height="100" width="100">
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="{{colo}}" /></svg> {{rev}}</h5><br>{% endfor %}</div>
+            </div>
+
+        </div>
+
+
+<footer>
+  	<div class="row">
+  		<div class="col-md-12 copy">
+  			<p class="text-center text-light">&copy;  Copyright 2020 developer: sankha subhra mondal(sankhasubhramondal.com).</p>
+  		</div>
+  	</div>
+
+</footer>
+
+
+
+
+  <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>

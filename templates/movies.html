@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block section %}
+<h5 class="text-success"><strong>Search Result:</strong></h5><br>
+            <table>
+                  <tr>
+    <th class="text-light">Name:</th>
+    <th class="text-light">id:</th>
+
+  </tr>
+            <tr>
+                <td>
+                    {% for ele in element %}
+
+                    <h6 class="text-success"><strong>{{ ele }}</strong></h6><br>
+
+                {% endfor %}</td>
+                <td>
+            {% for movies in urlss %}
+                    <form action="POST">
+                    <h6 class="bg_background" name="fld_val"><a class="text-light" href="{{url_for('movie_ul', type = movies)}}"> {{movies}}</a></h6><br>
+                    </form>
+            {% endfor %}
+                </td>
+            </tr>
+            </table>
+
+{% endblock %}
+{% block content %}
+
+<h1 class="text-light">Analyze Your Review:</h1>
+<form action="/review", method="post">
+
+                            <textarea type="text_review" name="review" minlength = "50" placeholder="write your movie review here" class="form-control"></textarea><br>
+
+							<input type="submit" value="Submit" class="btn bg_background btn-lg btn-block text-light">
+
+                        </form>
+{% endblock %}
+

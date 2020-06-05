@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block section %}
+ <h1 class="text-light">From IMBD</h1>
+						<form action="/search_movie", method="post">
+							<label class="text-light">Name Of the Movie:</label><br>
+                            <input type="text" name="name" class="form-control"><br><br>
+
+							<input type="submit" value="Search" class="btn bg_background btn-lg btn-block text-light">
+
+						</form>
+{% endblock %}
+{% block content %}
+{{ content }}
+{% endblock %}
+
+
