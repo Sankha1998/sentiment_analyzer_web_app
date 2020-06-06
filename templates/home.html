@@ -9,10 +9,12 @@
 {% extends "base.html" %}
 
 {% block section %}
- <h1 class="text-light">Name of The Movie:</h1>
+<br>
+ <h1 class="text-light text1">Name of The Movie:</h1>
+
 						<form action="/search_movie", method="post">
 
-                            <input type="text" name="name" class="form-control"><br><br>
+                            <input type="text" name="name" class="form-control"><br>
 
 							<input type="submit" value="Search" class="btn bg_background btn-lg btn-block text-light">
 
@@ -20,11 +22,11 @@
 
 {% endblock %}
 {% block content %}
-
-<h1 class="text-light">Analyze Your Review:</h1>
+<br>
+<h1 class="text-light text1">Analyze Your Review:</h1>
 <form action="/review", method="post">
 
-                            <textarea type="text_review" name="review" minlength = "50" placeholder="write your movie review here" class="form-control"></textarea><br>
+                            <textarea type="text_review" name="review" minlength = "50" placeholder="write your movie review here" class="form-control text1"></textarea><br>
 
 							<input type="submit" value="Submit" class="btn bg_background btn-lg btn-block text-light">
 

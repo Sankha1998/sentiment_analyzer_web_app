@@ -7,7 +7,6 @@ certifi==2019.11.28
 chardet==3.0.4
 Click==7.0
 cymem==2.0.3
-django-plotly-dash==1.1.5
 dpd-components==0.1.0
 Flask==1.1.1
 Flask-Compress==1.4.0

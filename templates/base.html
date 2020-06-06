@@ -27,20 +27,20 @@
 
         <div class="row">
 
-            <div class="col-md-6 topbar">
-                <div class="card" data-toggle="collapse">
-                <div class="card-body colr">
-                    <div class="user_review">{% block section %}{% endblock %}</div>
-                </div>
-                </div>
+
+            <div class="col-md-5 colr rounded mb-0">
+
+                    {% block section %}{% endblock %}
+
             </div>
-            <div class="col-md-6 topbar">
-                <div class="card" data-toggle="collapse">
-                    <div class="card-body colr">
-                        <div class="user_review">{% block content %}{% endblock %}</div>
-                    </div>
-                </div>
-            </div><br>
+            <div class="col-md-1"><br></div>
+
+            <div class="col-md-5 colr rounded mb-0">
+
+                        {% block content %}{% endblock %}
+
+            </div>
+
 
         </div>
 

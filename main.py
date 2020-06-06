@@ -17,6 +17,11 @@ from nltk.stem.porter import PorterStemmer
 ps=PorterStemmer()
 from nltk.stem import LancasterStemmer
 ls=LancasterStemmer()
+from nltk.stem import SnowballStemmer
+sno = SnowballStemmer('english')
+
+
+
 
 app=Flask(__name__)
 
@@ -68,7 +73,7 @@ def remove_stopwords(text):
 
 
 ## lamminization
-def remove_lamii(text):
+def remove_st(text):
     y = []
     for i in text:
         y.append(ls.stem(i))
@@ -78,7 +83,6 @@ def remove_lamii(text):
     str1 = "".join([str(ele) for ele in z])
 
     return str1
-
 
 def remove_stem(text):
     y = []
@@ -92,19 +96,32 @@ def remove_stem(text):
     return str1
 
 
-def reform_txt(text):
-    str1 = text.split()
-    str2 =" ".join([str(ele) for ele in str1])
-    return str2
+
+def stem_txt(text):
+    y = []
+    for i in text:
+        y.append(sno.stem(i))
+    z = y[:]
+    y.clear()
+
+    str1 = "".join([str(ele) for ele in z])
+
+    return str1
+
+
+
 
 def text_pro(text):
+    text = text
     processed_text = clean_html(text)
     processed_text = convert_lower(processed_text)
     processed_text = remove_special(processed_text)
     processed_text = remove_stopwords(processed_text)
-    processed_text = remove_lamii(processed_text)
+    processed_text = stem_txt(processed_text)
+    processed_text = remove_st(processed_text)
     processed_text = remove_stem(processed_text)
-    processed_text = reform_txt(processed_text)
+
+
     text = np.array([processed_text])
 
     return text
@@ -243,16 +260,12 @@ def movie_ul(type):
     user_name, url_title, url_rating, url_reviews = site_review(url2)
     rev=[]
     clrr=[]
-    raw = [i +" "+ j for i, j in zip(url_title,url_reviews)]
-    ttt = []
-    for i in raw:
-        ttt.append(i[:2000])
 
     if len(url_reviews)>10:
-        for tre in ttt:
-            t = text_pro(tre[:1500])
-            t = pre_model.transform(t)
-            res = model.predict(t)
+        for tre in url_reviews:
+            text_re = text_pro(tre)
+            text_re = pre_model.transform(text_re)
+            res = model.predict(text_re)
             if res[0] == 0:
                 rev.append("text-danger")
                 clrr.append("red")
@@ -282,7 +295,7 @@ def movie_ul(type):
 def login_validation():
     user_review = request.form.get('review')
     text_re = text_pro(user_review)
-    text_re=pre_model.transform(text_re[:1500])
+    text_re=pre_model.transform(text_re)
     res = model.predict(text_re)
     if res[0] == 0:
         return render_template('review.html', content='Negative')
