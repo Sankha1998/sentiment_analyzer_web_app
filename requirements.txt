@@ -38,8 +38,6 @@ scipy==1.4.1
 six==1.14.0
 sklearn==0.0
 soupsieve==2.0.1
-spacy==2.2.4
-spacy-lookups-data==0.3.2
 sqlparse==0.3.0
 srsly==1.0.2
 thinc==7.4.0
