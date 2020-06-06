@@ -47,11 +47,13 @@
 
             </div>
             <div class="row">
+
             <div class="col-md-4">
                 <h1 class="text-warning"><strong>IMDB Rating:</strong></h1>
                 <div class="text-align: center text-success"><h1><strong>{% for i in movie_rating %}{{i}}{% endfor %}</strong></h1></div>
 
             </div>
+
             <div class="col-md-4">
                 <h1 class="text-warning"><strong>Movie Details:</strong></h1>
 
@@ -59,35 +61,23 @@
                     {{movies}}<br>
                     {% endfor %}</div>
             </div>
+
             <div class="col-md-4">
                 <h1 class="text-warning"><strong>Movie Plot:</strong></h1>
                 <div class="text-success text-justify">{{plot}}<br></div>
             </div>
-
 				</div>
 
         <div class="row">
                     <div class="col-md-12"><h1><br></h1></div>
-             <div class="col-md-12">
-                 <br>
-                 <h1 class="text-center text-warning"><strong>User Reviews </strong></h1> <br>
+             <div class="col-md-12 ere">
+                 <h1 class="text-center text-warning"><strong>User Reviews </strong></h1> </div><br>
                  <div class="col-md-12"><h1><br></h1></div>
-                 <div>{% for t,r,u,re,colo, rev in review_complete %}<h3 class="text-light text-center"><strong> {{t}}</strong> |  rated : {{r}}  |  by - {{u}}  | </h3><br><h5 class="{{re}} text-justify"><svg height="100" width="100">
-  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="{{colo}}" /></svg> {{rev}}</h5><br>{% endfor %}</div>
+                 <div>{% for t,r,u,re,colo, rev in review_complete %}<h4 class="text-center"><strong> {{t}}</strong> |  rated : {{r}}  |  by - {{u}}  | </h4><br><h6 class="{{re}} text-justify"><svg height="100" width="100">
+  <circle cx="40" cy="40" r="30" stroke="black" stroke-width="2" fill="{{colo}}" /></svg> {{rev}}</h6><br>{% endfor %}</div>
             </div>
 
         </div>
-
-
-<footer>
-  	<div class="row">
-  		<div class="col-md-12 copy">
-  			<p class="text-center text-light">&copy;  Copyright 2020 developer: sankha subhra mondal(sankhasubhramondal.com).</p>
-  		</div>
-  	</div>
-
-</footer>
-
 
 
 
