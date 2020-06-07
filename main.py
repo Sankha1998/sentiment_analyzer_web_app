@@ -212,10 +212,10 @@ def movie_ul(type):
 
 
 @app.route('/review', methods=['POST','GET'])
-def login_validation():
+def rev():
     user_review = request.form.get('review')
-    text_re = text_pro(user_review)
-    text_re=pre_model.transform(text_re)
+    tre = np.array([user_review])
+    text_re = pre_model.transform(tre)
     res = model.predict(text_re)
     if res[0] == 0:
         return render_template('review.html', content='Negative')
