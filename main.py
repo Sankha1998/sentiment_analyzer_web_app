@@ -1,24 +1,10 @@
 from flask import Flask, render_template, request
 import numpy as np
 import pickle
-
 from bs4 import BeautifulSoup as bs
-
-from io import StringIO
 import requests
-import joblib
 import re
-import nltk
-nltk.download('stopwords')
 
-from nltk.corpus import stopwords
-st_word = stopwords.words('english')
-from nltk.stem.porter import PorterStemmer
-ps=PorterStemmer()
-from nltk.stem import LancasterStemmer
-ls=LancasterStemmer()
-from nltk.stem import SnowballStemmer
-sno = SnowballStemmer('english')
 
 
 
@@ -58,73 +44,7 @@ def remove_special(text):
     return x
 
 
-def remove_stopwords(text):
-    x = []
-    for i in text.split():
 
-        if i not in st_word:
-            x.append(i)
-    y = x[:]
-    x.clear()
-
-    str1 = " ".join([str(ele) for ele in y])
-
-    return str1
-
-
-## lamminization
-def remove_st(text):
-    y = []
-    for i in text:
-        y.append(ls.stem(i))
-    z = y[:]
-    y.clear()
-
-    str1 = "".join([str(ele) for ele in z])
-
-    return str1
-
-def remove_stem(text):
-    y = []
-    for i in text:
-        y.append(ls.stem(i))
-    z = y[:]
-    y.clear()
-
-    str1 = "".join([str(ele) for ele in z])
-
-    return str1
-
-
-
-def stem_txt(text):
-    y = []
-    for i in text:
-        y.append(sno.stem(i))
-    z = y[:]
-    y.clear()
-
-    str1 = "".join([str(ele) for ele in z])
-
-    return str1
-
-
-
-
-def text_pro(text):
-    text = text
-    processed_text = clean_html(text)
-    processed_text = convert_lower(processed_text)
-    processed_text = remove_special(processed_text)
-    processed_text = remove_stopwords(processed_text)
-    processed_text = stem_txt(processed_text)
-    processed_text = remove_st(processed_text)
-    processed_text = remove_stem(processed_text)
-
-
-    text = np.array([processed_text])
-
-    return text
 def url_link(text):
     clean = re.compile('/title/')
     x = re.sub(clean, '', text)
@@ -263,8 +183,8 @@ def movie_ul(type):
 
     if len(url_reviews)>10:
         for tre in url_reviews:
-            text_re = text_pro(tre)
-            text_re = pre_model.transform(text_re)
+            tre = np.array([tre[100:]])
+            text_re = pre_model.transform(tre)
             res = model.predict(text_re)
             if res[0] == 0:
                 rev.append("text-danger")
