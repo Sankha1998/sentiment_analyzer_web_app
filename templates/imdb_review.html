@@ -66,16 +66,24 @@
                 <h1 class="text-warning"><strong>Movie Plot:</strong></h1>
                 <div class="text-success text-justify">{{plot}}<br></div>
             </div>
-				</div>
+				</div><br>
 
         <div class="row">
-                    <div class="col-md-12"><h1><br></h1></div>
-             <div class="col-md-12 ere" data-toggle="collapse">
-                 <h1 class="text-center text-warning" data-toggle="collapse"><strong>User Reviews </strong></h1> </div><br>
-                 <div class="col-md-12" data-toggle="collapse"><h1><br></h1></div>
-                 <div data-toggle="collapse">{% for t,r,u,re,colo, rev in review_complete %}<h4 data-toggle="collapse" class="text-center"><strong> {{t}}</strong> |  rated : {{r}}  |  by - {{u}}  | </h4><br><h6 class="{{re}} text-justify" data-toggle="collapse"><svg height="100" width="100">
+
+            <div class="col-md-1"></div>
+             <div class="col-md-10 ere" data-toggle="collapse">
+                 <h1 class="text-center text-warning" data-toggle="collapse"><strong>User Reviews </strong></h1> </div>
+            <div class="col-md-1"></div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-1"></div>
+                 
+                 <div class="col-md-10" data-toggle="collapse">{% for t,r,u,re,colo, rev in review_complete %}<h4 data-toggle="collapse" class="text-center"><strong> {{t}}</strong> |  rated : {{r}}  |  by - {{u}}  | </h4><br><h6 class="{{re}} text-justify" data-toggle="collapse"><svg height="100" width="100">
                      <circle cx="40" cy="40" r="30" stroke="black" stroke-width="2" fill="{{colo}}" /></svg> <p data-toggle="collapse">{{rev}}</p></h6><br>{% endfor %}</div>
-            </div>
+        <div class="col-md-1"></div>
+        </div>
 
         </div>
 
