@@ -1,11 +1,6 @@
 Project: 
 #IMDB Sentiment Analyzer 1.O Using Machine Learning (Bag-Of-Words and Count Vectorizer)
 
-
-Deployed in Heroku
-
-Visit The Web App : https://sentiment-analyzer-sankha.herokuapp.com/
-
 Sentiment analysis (also known as opinion mining or emotion AI) refers to the use of natural language processing, text analysis, computational linguistics, and bio metrics to systematically identify, extract, quantify, and study affective states and subjective information. Sentiment analysis is widely applied to voice of the customer materials such as reviews and survey responses, online and social media, and healthcare materials for applications that range from marketing to customer service to clinical medicine. (source: Wikipedia)
 
 Application of Sentiment analysis is done to know about public reaction of any product, service, movie and event. Based on sentiment of consumers organization is able to implement improvement, innovation even can take actions . Movie Sentiment analysis tells weather a particular movie review is positive or negative, that means a user basically enjoyed, loved the movie or not. 
@@ -34,5 +29,6 @@ Web Scraping File: https://github.com/Sankha1998/imdb_scraping/blob/master/Imdb_
 
 3.Web Development & Deployment: 
   Python flask framework has been used for web development and the site was hosted in Heroku as well. Logic was picked from a separate python file and then it was reused for web development. 
-
+Visit The Web App : https://sentiment-analyzer-sankha.herokuapp.com/
+Video Documantation : https://youtu.be/ikh9lXoQFVg
 See The Full Repository : https://bitbucket.org/sankha1998/sentiment_analyzer_countvectorizer/src/master/
