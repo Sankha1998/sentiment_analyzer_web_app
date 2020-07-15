@@ -1,9 +1,8 @@
-# Sentiment_analyzer_web_app-
-movie review sentiment analyzer
+Project: 
+#IMDB Sentiment Analyzer 1.O Using Machine Learning (Bag-Of-Words and Count Vectorizer)
 
 
-
-Deployed in heroku|||
+Deployed in Heroku
 
 Visit The Web App : https://sentiment-analyzer-sankha.herokuapp.com/
 
