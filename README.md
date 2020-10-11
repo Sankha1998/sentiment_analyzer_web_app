@@ -1,5 +1,5 @@
 
-<img src="https://img.shields.io/github/languages/top/badges/shields.svg" alt="made with python">
+<img src="https://img.shields.io/github/languages/top/badges/shields.svg">
 
 
 # IMDB Sentiment Analyzer 1.O Using Machine Learning (Bag-Of-Words and Count Vectorizer)
