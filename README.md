@@ -1,4 +1,4 @@
-<img src="https://img.shields.io/badge/made%20with-python-blue.svg" alt="made with python"> <img src="https://img.shields.io/badge/domain-Machine-Learning.svg" alt="made with python">
+<img src="https://img.shields.io/badge/made%20with-python-blue.svg" alt="made with python"> <img src="https://img.shields.io/badge/domain-Machine%20Learning.svg" alt="made with python">
 
 
 
