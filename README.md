@@ -1,5 +1,4 @@
-<img src="https://img.shields.io/badge/made%20with-python-blue.svg" <img src="https://img.shields.io/badge/-HTML5-orange"> <img src="https://img.shields.io/badge/-Bootstrap-blueviolet"> alt="made with python"> <img src="https://img.shields.io/badge/domain-Machine%20Learning-orange.svg" > <img src="https://img.shields.io/badge/deployed%20in-Heroku-blue">
-
+<img src=https://img.shields.io/badge/build%20with-python-yellow> <img src="https://img.shields.io/badge/-HTML5-orange"> <img src="https://img.shields.io/badge/-Bootstrap-blueviolet"><img src=https://img.shields.io/badge/using-flask-green> <img src="https://img.shields.io/badge/deployed%20in-Heroku-blue"><img src="https://img.shields.io/badge/domain-Web%20Scraping-orange.svg" >
 
 
 
