@@ -1,4 +1,4 @@
-<img src=https://img.shields.io/badge/build%20with-python-yellow> <img src="https://img.shields.io/badge/-HTML5-orange"> <img src="https://img.shields.io/badge/-Bootstrap-blueviolet"><img src=https://img.shields.io/badge/using-flask-green> <img src="https://img.shields.io/badge/deployed%20in-Heroku-blue"><img src="https://img.shields.io/badge/domain-Web%20Scraping-orange.svg" >
+<img src=https://img.shields.io/badge/build%20with-python-yellow> <img src="https://img.shields.io/badge/-HTML5-orange"> <img src="https://img.shields.io/badge/-Bootstrap-blueviolet"><img src=https://img.shields.io/badge/using-flask-green> <img src="https://img.shields.io/badge/deployed%20in-Heroku-blue"><img src="https://img.shields.io/badge/domain-Web%20Scraping-orange%20.svg" ><img src="https://img.shields.io/badge/Machine%20Learning-orange.svg">
 
 
 
