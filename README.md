@@ -1,4 +1,4 @@
-<img src="https://img.shields.io/badge/made%20with-python-blue.svg" alt="made with python"> <img src="https://img.shields.io/badge/domain-Machine%20Learning-orange.svg" >
+<img src="https://img.shields.io/badge/made%20with-python-blue.svg" <img src="https://img.shields.io/badge/-HTML5-orange"> <img src="https://img.shields.io/badge/-Bootstrap-blueviolet"> alt="made with python"> <img src="https://img.shields.io/badge/domain-Machine%20Learning-orange.svg" > <img src="https://img.shields.io/badge/deployed%20in-Heroku-blue">
 
 
 
